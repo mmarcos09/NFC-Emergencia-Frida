@@ -34,6 +34,8 @@
                 class="bg-blue-600 hover:bg-blue-700 px-8 py-2 rounded-full font-semibold transition">Contactos</button>
             <button onclick="toggleModal('modalProtocolo')"
                 class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-2 rounded-full font-semibold transition">Protocolo</button>
+            <button onclick="toggleModal('modalMedicamentos')"
+                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-2 rounded-full font-semibold transition">Medicamentos</button>
         </div>
     </div>
 
@@ -42,13 +44,16 @@
         <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
             <h2 class="font-bold text-xl mb-4">Contactos de Emergencia</h2>
             <a href="tel:+525574260601"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Manuel
                 (Esposo)</a>
             <a href="tel:+525526535812"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Maribel
                 (Madre)</a>
             <a href="tel:+525554043522"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Mario
+                (Padre)</a>
+            <a href="tel:+525564678630"
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Mateo
                 (Padre)</a>
             <button onclick="toggleModal('modalContactos')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
         </div>
@@ -56,9 +61,27 @@
 
     <div id="modalProtocolo" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
         <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
-            <h2 class="font-bold text-xl mb-4">Protocolo de Emergencia</h2>
-            <p class="text-sm text-left mb-4">1. Colocar en posición horizontal.<br>2. Elevar pies 45°.<br>3. Brindar
-                electrolitos al despertar.<br><strong>No dar medicamentos.</strong></p>
+            <h2 class="font-bold text-xl mb-4">Protocolo de desmayo</h2>
+            <p class="text-sm text-left mb-4">
+                1. Colocar en posición horizontal.<br>
+                2. Reclinar cabeza y elevar pies 45°.<br>
+                3. Brindar electrolitos al despertar.<br>
+                (Electrolit: uva, moras, fresa-kiwi)
+                <strong>No usar alcohol para reanimar.</strong>
+                <strong>No administrar medicamentos.</strong>
+                <strong>No realizar maniobras ajenas al protocolo.</strong>
+            </p>
+            <button onclick="toggleModal('modalProtocolo')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalMedicamentos"
+        class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
+            <h2 class="font-bold text-xl mb-4">Medicamentos autorizados</h2>
+            <p class="text-sm text-left mb-4">
+                Vomito: Ondansetron 1 tableta 8mg<br>
+            </p>
             <button onclick="toggleModal('modalProtocolo')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
         </div>
     </div>
