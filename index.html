@@ -14,13 +14,13 @@
     <div class="max-w-sm w-full bg-[#374151] rounded-3xl shadow-2xl overflow-hidden text-center text-white">
         <!-- Header -->
         <div class="bg-gray-100 py-6 text-gray-800 font-bold text-2xl">
-            Frida Q. Montoya
+            Dra. Frida Q. Montoya Delgado
         </div>
 
         <!-- Imagen -->
         <div class="flex justify-center py-8">
-            <img src="https://via.placeholder.com/150" alt="Frida"
-                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover">
+            <!-- Ruta relativa a la imagen en tu repositorio -->
+            <img src="img/frida.jpg" alt="Frida" class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover">
         </div>
 
         <!-- Texto descriptivo -->
@@ -29,13 +29,14 @@
         </div>
 
         <!-- Botones de Acción -->
-        <div class="flex justify-center gap-4 pb-8">
+        <!-- Botones ajustados a una cuadrícula (grid) para que no se desborden -->
+        <div class="grid grid-cols-2 gap-2 px-4 pb-8">
             <button onclick="toggleModal('modalContactos')"
-                class="bg-blue-600 hover:bg-blue-700 px-8 py-2 rounded-full font-semibold transition">Contactos</button>
+                class="bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-bold text-xs transition">Contactos</button>
             <button onclick="toggleModal('modalProtocolo')"
-                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-2 rounded-full font-semibold transition">Protocolo</button>
+                class="bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-xl font-bold text-xs transition">Protocolo</button>
             <button onclick="toggleModal('modalMedicamentos')"
-                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-2 rounded-full font-semibold transition">Medicamentos</button>
+                class="col-span-2 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-xl font-bold text-xs transition">Medicamentos</button>
         </div>
     </div>
 
@@ -44,16 +45,16 @@
         <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
             <h2 class="font-bold text-xl mb-4">Contactos de Emergencia</h2>
             <a href="tel:+525574260601"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Manuel
+                class="block w-full bg-red-600 text-white text-center py-4 rounded-xl font-bold mb-3">Llamar a Manuel
                 (Esposo)</a>
             <a href="tel:+525526535812"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Maribel
+                class="block w-full bg-red-600 text-white text-center py-4 rounded-xl font-bold mb-3">Llamar a Maribel
                 (Madre)</a>
             <a href="tel:+525554043522"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Mario
+                class="block w-full bg-red-600 text-white text-center py-4 rounded-xl font-bold mb-3">Llamar a Mario
                 (Padre)</a>
             <a href="tel:+525564678630"
-                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a Mateo
+                class="block w-full bg-red-600 text-white text-center py-4 rounded-xl font-bold mb-3">Llamar a Mateo
                 (Padre)</a>
             <button onclick="toggleModal('modalContactos')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
         </div>
@@ -82,7 +83,8 @@
             <p class="text-sm text-left mb-4">
                 Vomito: Ondansetron 1 tableta 8mg<br>
             </p>
-            <button onclick="toggleModal('modalProtocolo')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
+            <button onclick="toggleModal('modalMedicamentos')"
+                class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
         </div>
     </div>
 
