@@ -4,68 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto de Emergencia - Frida</title>
+    <title>Perfil de Emergencia</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-600 flex items-center justify-center min-h-screen p-4">
 
-    <div class="max-w-sm w-full bg-white rounded-3xl shadow-xl overflow-hidden border-t-8 border-red-600">
-        <div class="flex flex-col items-center pt-8">
-            <div class="w-32 h-32 bg-gray-200 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                <img src="https://via.placeholder.com/150" alt="Frida" class="object-cover w-full h-full">
-            </div>
-            <h1 class="text-2xl font-black text-gray-800">Frida Q. Montoya Delgado</h1>
-            <p class="text-red-600 font-semibold px-4 py-1 bg-red-50 rounded-full mt-2">CONTACTO DE EMERGENCIA</p>
+    <!-- Tarjeta Principal (Inspirada en image_ee8885.png) -->
+    <div class="max-w-sm w-full bg-[#374151] rounded-3xl shadow-2xl overflow-hidden text-center text-white">
+        <!-- Header -->
+        <div class="bg-gray-100 py-6 text-gray-800 font-bold text-2xl">
+            Frida Q. Montoya
         </div>
 
-        <div class="p-6 space-y-4">
-            <a href="tel:+525574260601"
-                class="flex items-center justify-center w-full bg-red-600 text-white py-4 rounded-2xl text-xl font-bold hover:bg-red-700 transition">
-                📞 LLAMAR A ESPOSO
-            </a>
-            <a href="tel:+525526535812"
-                class="flex items-center justify-center w-full bg-red-600 text-white py-4 rounded-2xl text-xl font-bold hover:bg-red-700 transition">
-                📞 LLAMAR A MADRE
-            </a>
-            <a href="tel:+525554043522"
-                class="flex items-center justify-center w-full bg-red-600 text-white py-4 rounded-2xl text-xl font-bold hover:bg-red-700 transition">
-                📞 LLAMAR A PADRE
-            </a>
+        <!-- Imagen -->
+        <div class="flex justify-center py-8">
+            <img src="https://via.placeholder.com/150" alt="Frida"
+                class="w-32 h-32 rounded-full border-4 border-blue-600 object-cover">
         </div>
 
-        <div class="space-y-4 text-gray-800">
-            <!-- Condición -->
-            <div>
-                <h3 class="font-bold uppercase text-xs text-gray-500 mb-1">Condición Médica</h3>
-                <p class="bg-gray-100 p-3 rounded-lg">Paciente con episodios de síncope (desmayos).</p>
-            </div>
+        <!-- Texto descriptivo -->
+        <div class="px-6 pb-6 text-gray-300">
+            En caso de emergencia, por favor utilice los botones inferiores para obtener asistencia inmediata.
+        </div>
 
-            <!-- Protocolo -->
-            <div>
-                <h3 class="font-bold uppercase text-xs text-gray-500 mb-1">Protocolo de Actuación</h3>
-                <ul class="list-decimal ml-5 space-y-2 text-sm bg-blue-50 p-3 rounded-lg border border-blue-100">
-                    <li><strong>Posición:</strong> Acostar en superficie plana, elevar las piernas 45° y colocar un
-                        apoyo suave bajo la cabeza.</li>
-                    <li><strong>Estímulo:</strong> Si está inconsciente, intentar despertar suavemente moviendo el brazo
-                        (máximo 10 minutos).</li>
-                    <li><strong>Al despertar:</strong> Una vez consciente, sentar a la persona lentamente.</li>
-                    <li><strong>Hidratación:</strong> Ofrecer electrolitos (Electrolit de uva, moras o fresa-kiwi) solo
-                        cuando esté consciente y pueda tragar.</li>
-                </ul>
-            </div>
-
-            <!-- Prohibido -->
-            <div>
-                <h3 class="font-bold uppercase text-xs text-red-600 mb-1">Lo que NO se debe hacer</h3>
-                <ul class="list-disc ml-5 space-y-1 text-sm text-red-700 bg-red-50 p-3 rounded-lg">
-                    <li><strong>NO</strong> usar alcohol para reanimar.</li>
-                    <li><strong>NO</strong> administrar medicamentos.</li>
-                    <li><strong>NO</strong> realizar maniobras bruscas o ajenas al protocolo.</li>
-                </ul>
-            </div>
+        <!-- Botones de Acción -->
+        <div class="flex justify-center gap-4 pb-8">
+            <button onclick="toggleModal('modalContactos')"
+                class="bg-blue-600 hover:bg-blue-700 px-8 py-2 rounded-full font-semibold transition">Contactos</button>
+            <button onclick="toggleModal('modalProtocolo')"
+                class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-8 py-2 rounded-full font-semibold transition">Protocolo</button>
         </div>
     </div>
+
+    <!-- Modales -->
+    <div id="modalContactos" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
+            <h2 class="font-bold text-xl mb-4">Contactos de Emergencia</h2>
+            <a href="tel:+525574260601"
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                (Esposo)</a>
+            <a href="tel:+525526535812"
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                (Madre)</a>
+            <a href="tel:+525554043522"
+                class="block w-full bg-red-600 text-white text-center py-3 rounded-xl font-bold mb-3">Llamar a José
+                (Padre)</a>
+            <button onclick="toggleModal('modalContactos')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalProtocolo" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center p-4">
+        <div class="bg-white text-gray-800 p-6 rounded-2xl w-full max-w-sm">
+            <h2 class="font-bold text-xl mb-4">Protocolo de Emergencia</h2>
+            <p class="text-sm text-left mb-4">1. Colocar en posición horizontal.<br>2. Elevar pies 45°.<br>3. Brindar
+                electrolitos al despertar.<br><strong>No dar medicamentos.</strong></p>
+            <button onclick="toggleModal('modalProtocolo')" class="w-full bg-gray-200 py-2 rounded-xl">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+        }
+    </script>
 </body>
 
 </html>
